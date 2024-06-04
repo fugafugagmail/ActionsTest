@@ -3,14 +3,9 @@ run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
 
 on:
 #  push:
-  workflow_call:
-    inputs:
-      config-path:
-        required: true
-        type: string
-    secrets:
-      envPAT:
-        required: true
+  schedule:
+    - cron:  '35 * * * *'
+
 
  
 jobs:
